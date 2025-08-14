@@ -1,0 +1,189 @@
+name: nearchat
+description: NearChat - Location-based social messaging platform
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Network & API
+  dio: ^5.4.0
+  retrofit: ^4.0.3
+  json_annotation: ^4.8.1
+
+  # Real-time Communication
+  socket_io_client: ^2.0.3+1
+  flutter_webrtc: ^0.9.47
+  permission_handler: ^11.1.0
+
+  # Location Services
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+  location: ^5.0.3
+
+  # Authentication
+  google_sign_in: ^6.1.6
+  firebase_auth: ^4.15.3
+  firebase_core: ^2.24.2
+
+  # UI Components
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.0
+  image_picker: ^1.0.4
+  video_player: ^2.8.1
+  audio_session: ^0.1.18
+  record: ^5.0.4
+  audioplayers: ^5.2.1
+
+  # AdMob Integration
+  google_mobile_ads: ^4.0.0
+
+  # Utilities
+  intl: ^0.18.1
+  uuid: ^4.2.1
+  crypto: ^3.0.3
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+  device_info_plus: ^9.1.1
+  package_info_plus: ^4.2.0
+  url_launcher: ^6.2.2
+  share_plus: ^7.2.1
+  connectivity_plus: ^5.0.2
+  battery_plus: ^5.0.2
+
+  # UI Enhancements
+  flutter_staggered_animations: ^1.1.1
+  lottie: ^2.7.0
+  shimmer: ^3.0.0
+  pull_to_refresh: ^2.0.0
+  infinite_scroll_pagination: ^4.0.0
+  photo_view: ^0.14.0
+  video_thumbnail: ^0.5.3
+  flutter_local_notifications: ^16.3.0
+
+  # Security
+  flutter_secure_storage: ^9.0.0
+  local_auth: ^2.1.7
+
+  # Analytics & Monitoring
+  firebase_analytics: ^10.7.4
+  firebase_crashlytics: ^3.4.8
+  firebase_performance: ^0.9.3+8
+
+  # Push Notifications
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^16.3.0
+
+  # File Handling
+  file_picker: ^6.1.1
+  path: ^1.8.3
+  mime: ^1.0.4
+
+  # QR Code
+  qr_flutter: ^4.1.0
+  qr_code_scanner: ^1.0.1
+
+  # Charts & Analytics
+  fl_chart: ^0.65.0
+
+  # Social Features
+  story_view: ^0.0.19
+  camera: ^0.10.5+5
+
+  # WebRTC Enhancements
+  flutter_webrtc_wrapper: ^0.1.0
+
+  # Background Processing
+  workmanager: ^0.5.2
+
+  # Deep Links
+  uni_links: ^0.5.1
+
+  # Biometric Authentication
+  local_auth_android: ^1.0.35
+  local_auth_ios: ^1.1.5
+
+  # Platform Specific
+  webview_flutter: ^4.4.2
+  webview_flutter_android: ^3.12.0
+  webview_flutter_wkwebview: ^3.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code Generation
+  build_runner: ^2.4.7
+  riverpod_generator: ^2.3.9
+  retrofit_generator: ^7.0.8
+  json_serializable: ^6.7.1
+  hive_generator: ^2.0.1
+
+  # Linting & Formatting
+  flutter_lints: ^3.0.1
+  custom_lint: ^0.5.7
+  riverpod_lint: ^2.3.7
+
+  # Testing
+  mockito: ^5.4.4
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+    - assets/sounds/
+    - assets/stickers/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+
+  # Platform-specific configurations
+  android:
+    package: com.nearchat.app
+    minSdkVersion: 21
+    targetSdkVersion: 33
+    compileSdkVersion: 33
+
+  ios:
+    bundleIdentifier: com.nearchat.app
+    minimumOsVersion: '12.0'
+
+# AdMob Configuration
+google_mobile_ads:
+  android:
+    app_id: ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+    banner_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+    interstitial_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/wwwwwwwwww
+    rewarded_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/vvvvvvvvvv
+  ios:
+    app_id: ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy
+    banner_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+    interstitial_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/wwwwwwwwww
+    rewarded_ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/vvvvvvvvvv
